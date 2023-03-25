@@ -3,6 +3,8 @@ package com.example.bottomnavigationmenenislesiw
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 import com.example.bottomnavigationmenenislesiw.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -13,6 +15,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         binding = FragmentHomeBinding.bind(view)
 
+        binding.buttonHome.setOnClickListener {
+            val navController =
+                Navigation.findNavController(requireActivity(), R.id.fragment_container)
+
+            navController.navigate(MainFragmentDirections.actionMainFragmentToRepositoryFragment2())
+        }
 
     }
 }

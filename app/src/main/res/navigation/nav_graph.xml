@@ -9,12 +9,19 @@
         android:name="com.example.bottomnavigationmenenislesiw.LoginFragment"
         android:label="LoginFragment" >
         <action
-            android:id="@+id/action_loginFragment_to_main_graph"
-            app:destination="@id/main_graph" />
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
-    <include app:graph="@navigation/main_graph" />
     <fragment
         android:id="@+id/repositoryFragment2"
         android:name="com.example.bottomnavigationmenenislesiw.RepositoryFragment"
         android:label="RepositoryFragment" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.bottomnavigationmenenislesiw.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_repositoryFragment2"
+            app:destination="@id/repositoryFragment2" />
+    </fragment>
 </navigation>

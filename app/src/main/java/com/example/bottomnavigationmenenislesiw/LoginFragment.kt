@@ -16,7 +16,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
         binding.buttonLogin.setOnClickListener {
             findNavController().navigate(
-                LoginFragmentDirections.actionLoginFragmentToMainGraph()
+                LoginFragmentDirections.actionLoginFragmentToMainFragment()
             )
         }
     }

@@ -20,12 +20,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         binding = FragmentMainBinding.bind(view)
 
-        val bottomNavigationView =
-            requireActivity().findViewById<BottomNavigationView>(R.id.bottom_navigation)
         val navHostFragment =
             childFragmentManager.findFragmentById(R.id.fragment_container_main) as NavHostFragment
         navController = navHostFragment.findNavController()
-        bottomNavigationView.setupWithNavController(navController)
+
+        binding.bottomNavigation.setupWithNavController(navController)
 
     }
 }
